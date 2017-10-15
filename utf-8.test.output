@@ -1,0 +1,6 @@
+Character       CodePoint       CodeUnits       uft8encode(ch)  uft8encode(cp)  utf8decode(cu)
+A               U+000041        [41]            [41]            [41]            U+000041
+ö               U+0000f6        [c3,b6]         [c3,b6]         [c3,b6]         U+0000f6
+Ж               U+000416        [d0,96]         [d0,96]         [d0,96]         U+000416
+€               U+0020ac        [e2,82,ac]      [e2,82,ac]      [e2,82,ac]      U+0020ac
+𝄞              U+01d11e        [f0,9d,84,9e]   [f0,9d,84,9e]   [f0,9d,84,9e]   U+01d11e
