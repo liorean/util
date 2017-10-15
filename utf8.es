@@ -19,7 +19,7 @@
 |*    units and returns a uint32 representing that code point.             *|
 \***************************************************************************/
 
-const
+export const
   utf8encode=
     n=>
       (m=>
@@ -44,8 +44,8 @@ const
        :(()=>{throw'Invalid Unicode Code Point!'})())
       ( typeof n==='string'
        ?n.codePointAt(0)
-       :n&0x1fffff),
-  utf8decode=
+       :n&0x1fffff)
+ ,utf8decode=
     ([m,n,o,p])=>
       m<0x80
      ?( m&0x7f)<<0
