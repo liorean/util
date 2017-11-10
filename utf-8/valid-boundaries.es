@@ -2,8 +2,8 @@ export const
   valid_UTF_8_boundaries=
     Uint8Array(
       [
-        0x20,                   // U+0020 mid single
         0x00,                   // U+0000 lower limit single
+        0x20,                   // U+0020 mid single
         0x7f,                   // U+007f upper limit single
 
         0xc2,0x80,              // U+0080 lower limit double
