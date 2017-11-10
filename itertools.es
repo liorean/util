@@ -62,7 +62,7 @@ export const
           while(true){
             let {done,value}=iterator.next()
             if(done) return acc
-            yield acc=combiner(acc,value)}}
+            yield acc=combiner(acc)(value)}}
  ,iterable_reduce_right=
     combiner=>
       defaultvalue=>
@@ -74,7 +74,7 @@ export const
             yield acc
             let {done,value}=iterator.next()
             if(done) return acc
-            acc=combiner(value,acc)}}
+            acc=combiner(value)(acc)}}
  ,iterable_fold_left=
     combiner=>
       initialvalue=>
@@ -84,7 +84,7 @@ export const
           while(true){
             let {done,value}=iterator.next()
             if(done) return acc
-            yield acc=combiner(acc,value)}}
+            yield acc=combiner(acc)(value)}}
  ,iterable_fold_right=
     combiner=>
       initialvalue=>
@@ -95,7 +95,7 @@ export const
             yield acc
             let {done,value}=iterator.next()
             if(done) return acc
-            acc=combiner(value,acc)}}
+            acc=combiner(value)(acc)}}
  ,iterable_zip_shortest=
     zipper=>
       function*zip_shortest(...iterables){
